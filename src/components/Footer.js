@@ -1,0 +1,43 @@
+import React from 'react'
+
+import Socials from './Socials.js'
+
+const Footer = ({ socialsData }) => {
+  return (
+    <footer className="Footer content-section" id="contact">
+        
+        <div className="form-section-footer">
+          <form action="/POST" className="contact-form" id="contact-form">
+            <input type="text" className="form-input" id="form-name" name="form-name" placeholder="name" required/>
+            <span></span>
+
+            <input type="email" className="form-input" id="form-email" name="form-email" placeholder="email" required/>
+            <span></span>
+            
+            <textarea className="form-input" id="form-textarea" name="form-textarea" placeholder="message"  required></textarea>
+            <span></span>
+
+            <input id="form-submit" type="submit" value="submit"></input>
+          </form>
+          
+          <div className="get-in-touch">
+            get in touch
+          </div>
+        </div>
+
+        <div className="socials">
+            {socialsData.length > 0 && socialsData.map((data) => (
+                <Socials key={data.id} socialsData={data} />
+            ))}
+        </div>
+
+        <div className="bottom-footer">
+          <p>&copy; 2022 William Vuong</p>
+          <a id="back-to-top-button" href="#header">back to top &#8679;</a>
+        </div>
+
+    </footer>
+  )
+}
+
+export default Footer
