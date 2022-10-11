@@ -1,16 +1,17 @@
 
 import './index.css';
 
-import Header from './components/Header'
-import Intro from './components/Intro'
-import About from './components/About'
-import Projects from './components/Projects'
-import Footer from './components/Footer'
+import { React, useEffect } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import socialsData from './data/socials-data'
+import Header from './components/layout/Header'
+import Home from './components/pages/Home'
+import Resume from './components/pages/Resume'
+import Footer from './components/layout/Footer'
+
 import projectsData from './data/projects-data'
+import socialsData from './data/socials-data'
 
-import { useEffect } from 'react'
 
 function App() {
   useEffect(() => {
@@ -38,13 +39,16 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <Header />
-      <Intro />
-      <About />
-      <Projects projectsData={projectsData} />
-      <Footer socialsData={socialsData} />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route exact path='/' element={<Home projectsData={projectsData}/>}></Route>
+          <Route exact path='/resume' element={<Resume/>}></Route>
+        </Routes>
+        <Footer socialsData={socialsData}/>
+      </div>
+    </BrowserRouter>
   );
 }
 
