@@ -2,9 +2,10 @@ import React from 'react'
 
 const Resume = () => {
   return (
-    <div className="Resume">
-      <p>I am an open-minded self-starter with a passion for all things Web Development and am currently seeking a role in the Web Development field. My passion for Web Development stems from my desire to be constantly learning in a constantly changing field, problem solving, and a need to create.</p>
-      <section className="technical-skills">
+    <div className="Resume content-section">
+      {/* <p>I am an open-minded self-starter with a passion for all things Web Development and am currently seeking a role in the Web Development field. My passion for Web Development stems from my desire to be constantly learning in a constantly changing field, problem solving, and a need to create.</p> */}
+      
+      <section className="technical-skills resume-section">
         <h2>Technical Skills</h2>
         <ul>
           <li>
@@ -55,11 +56,11 @@ const Resume = () => {
         </ul>
       </section>
 
-      <section className="work-experience">
+      <section className="work-experience resume-section">
         <h2>Work Experience</h2>
         
         <div className="work">
-          <div className="work-duration">November 2021 - September 2022</div>
+          <div className="work-duration">September 2021 - September 2022</div>
           <h3>WordPress Developer, <span className="workplace">Ontario Learning Development Foundation INC.</span></h3>
           <ul className="work-responsibilities">
             <li>Used various technologies including WordPress, HTML, and CSS, and various page building Plugins such as Elementor, WPBakery, and Beaver Builder to redesign, develop, maintain, and update websites, and SEO optimize pages</li>
@@ -101,7 +102,7 @@ const Resume = () => {
         </div>
       </section>
 
-      <section className="education">
+      <section className="education resume-section">
         <h2>Education</h2>
         <div className="work-duration">May 2017 - May 2019</div>
         <h3>Computer Programming, <span className="workplace">Seneca College</span></h3>

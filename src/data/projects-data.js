@@ -1,4 +1,10 @@
-import sampleImg from '../project-imgs/sample-img.png'
+// import sampleImg from '../project-imgs/sample-img.png'
+import blazesoft from '../project-imgs/project-blazesoft.png'
+import businesshub from '../project-imgs/project-businesshub.png'
+import gamertech from '../project-imgs/project-gamertech.png'
+import itlogger from '../project-imgs/project-itlogger.png'
+import studio6ix from '../project-imgs/project-studio6ix.png'
+import githubfinder from '../project-imgs/project-githubfinder.png'
 
 const projectsData = [
     {
@@ -6,7 +12,7 @@ const projectsData = [
         name: "GamerTech Toronto",
         description: "Shopify",
         link: "https://gamertech.ca/",
-        img: sampleImg,
+        img: gamertech,
         imgHover: ""
     },
     {
@@ -14,7 +20,7 @@ const projectsData = [
         name: "Business Hub",
         description: "WordPress",
         link: "https://thebusinesshub.info/",
-        img: sampleImg,
+        img: businesshub,
         imgHover: ""
     },
     {
@@ -22,7 +28,7 @@ const projectsData = [
         name: "Studio 6ix",
         description: "WordPress",
         link: "http://studio6ix.ca/",
-        img: sampleImg,
+        img: studio6ix,
         imgHover: ""
     },
     {
@@ -30,7 +36,7 @@ const projectsData = [
         name: "IT Logger",
         description: "React Demo",
         link: "https://wvitlogger.netlify.app/",
-        img: sampleImg,
+        img: itlogger,
         imgHover: ""
     },
     {
@@ -38,7 +44,7 @@ const projectsData = [
         name: "GitHub Finder",
         description: "React Demo",
         link: "https://github.com/willvuong/react-github-finder-app/",
-        img: sampleImg,
+        img: githubfinder,
         imgHover: ""
     },
     {
@@ -46,7 +52,7 @@ const projectsData = [
         name: "Blazesoft Bookstore",
         description: "React Demo",
         link: "https://wvblazesoftbookstore.netlify.app/",
-        img: sampleImg,
+        img: blazesoft,
         imgHover: ""
     }
 ]
