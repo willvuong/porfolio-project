@@ -7,7 +7,7 @@ const Footer = ({ socialsData }) => {
     <footer className="Footer content-section" id="contact">
         
         <div className="form-section-footer">
-          <form action="/POST" className="contact-form" id="contact-form">
+          <form method="post" action="contact-form-handler.php" className="contact-form" id="contact-form">
             <input type="text" className="form-input" id="form-name" name="form-name" placeholder="name" required/>
             <span></span>
 
