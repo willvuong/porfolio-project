@@ -353,10 +353,6 @@ html {
   animation-delay: 1.9s;
   animation-fill-mode: backwards;
 }
-
-@media only screen and (max-width:1000px) {
-  
-}
 /*  */
 
 
@@ -377,7 +373,7 @@ html {
 }
 
 .Intro h2 {
-  font-size: 5rem;
+  font-size: clamp(3.5rem, 5vw, 5rem);
   margin-bottom: -8px;
   animation: translateYContent 1s;
   animation-delay: 0.5s;
@@ -386,7 +382,7 @@ html {
 }
 
 .Intro h1 {
-  font-size: 7.5rem;
+  font-size: clamp(6rem, 7.5vw, 7.5rem);
   margin-bottom: -4px;
   animation: translateYContent 1s;
   animation-delay: 1.2s;
@@ -395,11 +391,17 @@ html {
 }
 
 .Intro h3 {
-  font-size: 4rem;
+  font-size: clamp(2.5rem, 4vw, 4rem);
   animation: translateYContent 1s;
   animation-delay: 1.4s;
   transform: translate(0, -100%);
   animation-fill-mode: forwards;
+}
+
+@media only screen and (max-width:1000px) {
+  .Intro h2, .Intro h1, .Intro h3 {
+    letter-spacing: -0.13rem;
+  }
 }
 /*  */
 
