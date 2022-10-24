@@ -400,7 +400,7 @@ html {
 }
 
 .Intro h2 {
-  font-size: clamp(3rem, 5vw, 5rem);
+  font-size: clamp(3rem, 8vw, 5rem);
   margin-bottom: -8px;
   animation: translateYContent 1s;
   animation-delay: 0.5s;
@@ -409,7 +409,7 @@ html {
 }
 
 .Intro h1 {
-  font-size: clamp(5.25rem, 7vw, 7.5rem);
+  font-size: clamp(5.25rem, 12vw, 7.5rem);
   margin-bottom: -4px;
   animation: translateYContent 1s;
   animation-delay: 1.2s;
@@ -418,7 +418,7 @@ html {
 }
 
 .Intro h3 {
-  font-size: clamp(2rem, 4vw, 4rem);
+  font-size: clamp(2rem, 6vw, 4rem);
   animation: translateYContent 1s;
   animation-delay: 1.4s;
   transform: translate(0, -100%);
@@ -452,7 +452,7 @@ html {
 }
 
 .portfolio-img {
-  width: clamp(8rem, 50vw, 275px);
+  width: clamp(10rem, 26vw, 275px);
   display: block;
   margin: 2rem;
   position: relative;
@@ -462,8 +462,8 @@ html {
 .portfolio-img-background {
   position: absolute;
   background-color: #f1ee2a;
-  height: clamp(10rem, 87%, 380px);
-  width: clamp(11rem, 50vw, 280px);
+  height: clamp(10rem, 86%, 380px);
+  width: clamp(11rem, 27vw, 280px);
   transform: translate(20%, -114%)
 }
 
