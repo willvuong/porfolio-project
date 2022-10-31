@@ -25,10 +25,10 @@ function App() {
       );
     };
 
-    var borderTop = document.querySelectorAll('.content-section-heading-container');
+    var borderTopProjects = document.querySelectorAll('.content-section-heading-container');
     window.addEventListener('scroll', function (event) {
       // add event on scroll
-      borderTop.forEach(element => {
+      borderTopProjects.forEach(element => {
         //for each .thisisatest
         if (isInViewport(element)) {
           //if in Viewport
@@ -36,6 +36,30 @@ function App() {
         }
       });
     }, false);
+
+
+
+    var borderTopAbout = document.querySelectorAll('.About');
+
+    window.addEventListener('scroll', function (event) {
+      borderTopAbout.forEach(element => {
+        if (isInViewport(element)) {
+          element.querySelector('.portfolio-bio').classList.add("animation-bio");
+          element.querySelector('.portfolio-img-container').classList.add("animation-img-container");
+        }
+      });
+    }, false);
+
+    var borderTopProject = document.querySelectorAll('.Project');
+    window.addEventListener('scroll', function (event) {
+      borderTopProject.forEach(element => {
+        if (isInViewport(element)) {
+          element.classList.add("animation-project");
+        }
+      });
+    }, false);
+
+    
   }, []);
 
   return (

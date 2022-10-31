@@ -447,8 +447,49 @@ html {
   justify-content: center;
 }
 
+@keyframes translateXContent2 {
+  from {
+    opacity: 0;
+    transform: translateX(-70px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes translateXContent3 {
+  from {
+    opacity: 0;
+    transform: translateX(70px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.portfolio-bio {
+  font-size: clamp(1.2rem, 4vw, 1.45rem);
+  margin-right: 5rem;
+  max-width: 455px;
+  opacity: 0;
+}
+
+.animation-bio {
+  animation: translateXContent2 2s;
+  animation-fill-mode: forwards;
+}
+
 .portfolio-img-container {
    position: relative;
+   opacity: 0;
+}
+
+.animation-img-container {
+  animation: translateXContent3 2s;
+  animation-fill-mode: forwards;
 }
 
 .portfolio-img {
@@ -472,12 +513,6 @@ html {
   margin-top: 0;
   margin-bottom: 0.5rem;
 } */
-
-.portfolio-bio {
-  font-size: clamp(1.2rem, 4vw, 1.45rem);
-  margin-right: 5rem;
-  max-width: 455px;
-}
 
 #portfolio-contact-button {
   text-decoration: none;
@@ -541,6 +576,12 @@ html {
 
 .Project {
   text-decoration: none;
+  opacity: 0;
+}
+
+.animation-project {
+  animation: translateYContent 1.3s;
+  animation-fill-mode: forwards;
 }
 
 .project-details h4 {
