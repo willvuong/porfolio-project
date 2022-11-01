@@ -180,11 +180,11 @@ html {
 
 /* header */
 .Header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin: 0 6.25%; 
-  /* 10.25%; */
+}
+
+.website-logo-container {
+  z-index: 2;
 }
 
 .website-logo {
@@ -199,7 +199,13 @@ html {
   user-select: none; /* Standard */
 }
 
-.Navigation {
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-button {
   display: flex;
   align-items: center;
 }
@@ -257,128 +263,109 @@ html {
   opacity: 0;
 }
 
-.Navigation input:checked ~ .hamburger {
+.menu-button input:checked ~ .hamburger {
   background: transparent;
 }
 
-.Navigation input:checked ~ .hamburger:before {
+.menu-button input:checked ~ .hamburger:before {
   top: 0;
   transform: rotate(-45deg);
   width: 30px;
 }
 
-.Navigation input:checked ~ .hamburger:after {
+.menu-button input:checked ~ .hamburger:after {
   top: 0;
   transform: rotate(45deg);
   width: 30px;
 }
 
-.Navigation input:checked ~ .navigation-list {
-  top: 162px;
-  /* animation: translateYContentDown 1s;
-  animation-fill-mode: forwards; */
-  height: 175px;
-}
-
-.toggle-menu, .hamburger {
+.Menu {
   display: none;
 }
 
-@media only screen and (max-width:1000px) {
-  .toggle-menu, .hamburger {
-    display: flex;
-    color: red;
-  }
-
-  .navigation-list {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    top: -200px;
-    left: 0;
-    width: 100%;
-    height: 20px;
-    transition: height 0.8s;
-    background-color: #d8d8d8;
-    padding-left: 0;
-    z-index: 1;
-    margin-top: 0;
-  }
-
+.menu-open {
+  padding: 155px 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #f4e8c2;
+  z-index: 1;
+  box-sizing: border-box;
 }
 
-.navigation-list {
-  text-transform: lowercase;
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
 }
 
-.navigation-list li {
-  list-style-type: none;
-  display: inline-flex;
-  margin: 1.3rem;
+
+.menu-section {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-.navigation-list a {
+.menu-socials a {
+  margin-right: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.menu-socials a, .menu-contact a {
   text-decoration: none;
   color: black;
 }
 
-#contact-button {
-  border-radius: 5px;
-  position: relative;
-  border: solid 2px #000000;
-  padding: 1rem 1.75rem;
-  overflow: hidden;
-  transition:         0.18s ease-in;
-  -o-transition:      0.18s ease-in;
-  -ms-transition:     0.18s ease-in;
-  -moz-transition:    0.18s ease-in;
-  -webkit-transition: 0.18s ease-in;
+.menu-contact {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 0.03rem;
+  display: flex;
+  flex-direction: column;
 }
 
-#contact-button:hover {
-  color: #f3f3f3;
+.menu-contact a {
+  margin-bottom: 1rem;
 }
 
-#contact-button::before {
-  content: "";
-  position: absolute;
-  background: #383736;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 100%;
-  z-index: -1;
-  -webkit-transition: top 0.19s ease-in;
+.menu-links {
+  margin: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
 }
 
-#contact-button:hover:before {
-  top: 0;
+.menu-links li {
+  list-style-type: none;
+  margin: 1.3rem 0;
 }
 
-.navigation-list li:nth-child(1) {
-  animation: fadeIn 1s;
-  animation-delay: 1.7s;
-  animation-fill-mode: backwards;
+.menu-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 3.5rem;
+  font-weight: bold;
 }
 
-/* .navigation-list li:nth-child(2) {
-  animation: fadeIn 1s;
-  animation-delay: 1.9s;
-  animation-fill-mode: backwards;
-}
+@media only screen and (max-width:1000px) {
+  .menu-open {
+    flex-direction: column-reverse;
+    padding: 155px 5rem;
+  }
 
-.navigation-list li:nth-child(3) {
-  animation: fadeIn 1s;
-  animation-delay: 2.1s;
-  animation-fill-mode: backwards;
-} */
-
-#contact-button {
-  animation: fadeIn 1s;
-  animation-delay: 1.9s;
-  animation-fill-mode: backwards;
+  .menu-links, .menu-section {
+    width: 100%;
+  }
 }
 /*  */
 
