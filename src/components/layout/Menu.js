@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom'
 const Menu = () => {
   const toggleMenu = () => {
     document.querySelector(".toggle-menu").checked = false;
+    document.querySelector(".Menu").classList.toggle('menu-open');
+    document.querySelector('body').classList.toggle('stop-scrolling');
   }
 
   return (
